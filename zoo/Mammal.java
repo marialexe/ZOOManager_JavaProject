@@ -7,7 +7,7 @@ public class Mammal extends Animal {
   private Boolean drinkMilk;
 
 
-  public Mammal(String type, String age, ArrayList<String> foods, String habitat, String motion){
+  public Mammal(String type, AgeType age, ArrayList<String> foods, String habitat, String motion){
     super(type, age, foods, habitat, motion);
     this.giveBirth = true;
     this.drinkMilk = true;
@@ -18,7 +18,7 @@ public class Mammal extends Animal {
   }
 
   public Boolean drinkMilk() {
-    if (getAge().equals("baby")) {
+    if (getAge().equals(AgeType.BABY)) {
       return this.drinkMilk;
     } else {
       return !this.drinkMilk;

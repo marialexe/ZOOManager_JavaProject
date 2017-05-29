@@ -20,9 +20,9 @@ public class MammalTest {
     ArrayList<String> foodMammal1 = new ArrayList<String>(
     Arrays.asList("milk", "grasses"));
     
-    mammal = new Mammal("Lion", "adult", foodMammal,
+    mammal = new Mammal("Lion", AgeType.ADULT, foodMammal,
       "savana", "walking");
-    mammal1 = new Mammal("Elephant", "baby", foodMammal1,
+    mammal1 = new Mammal("Elephant", AgeType.BABY, foodMammal1,
       "savana", "walking");
   }
 
@@ -38,7 +38,7 @@ public class MammalTest {
 
   @Test
   public void canGetAge(){
-    assertEquals("adult",mammal.getAge());
+    assertEquals(AgeType.ADULT,mammal.getAge());
   }
 
   @Test

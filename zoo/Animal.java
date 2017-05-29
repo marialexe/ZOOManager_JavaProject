@@ -5,12 +5,12 @@ import java.util.*;
 public abstract class Animal {
   
   private String type;
-  private String age;
+  private AgeType age;
   private ArrayList<String> foods;
   private String habitat;
   private String motion;
   
-  public Animal(String type, String age, ArrayList<String> foods, String habitat, String motion){
+  public Animal(String type, AgeType age, ArrayList<String> foods, String habitat, String motion){
     this.type = type;
     this.age = age;
     this.foods = foods;
@@ -22,7 +22,7 @@ public abstract class Animal {
     return this.type;
   }
 
-  public String getAge() {
+  public AgeType getAge() {
     return this.age;
   }
 
