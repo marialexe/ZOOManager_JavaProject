@@ -1,7 +1,7 @@
 package zoo;
 
 import java.util.*;
-public class Mammal implements Animal {
+public class Mammal {
 
   private String type;
   private String age;
