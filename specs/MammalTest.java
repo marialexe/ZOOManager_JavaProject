@@ -15,13 +15,14 @@ public class MammalTest {
 
   @Before
   public void before() {
+    
     ArrayList<String> foodMammal = new ArrayList<String>(
     Arrays.asList("antilope", "zebra", "giraphe"));
-    ArrayList<String> foodMammal1 = new ArrayList<String>(
-    Arrays.asList("milk", "grasses"));
-    
     mammal = new Mammal("Lion", AgeType.ADULT, foodMammal,
       "savana", "walking");
+
+    ArrayList<String> foodMammal1 = new ArrayList<String>(
+    Arrays.asList("milk", "grasses"));
     mammal1 = new Mammal("Elephant", AgeType.BABY, foodMammal1,
       "savana", "walking");
   }

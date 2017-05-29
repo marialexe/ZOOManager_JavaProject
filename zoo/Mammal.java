@@ -1,28 +1,35 @@
 package zoo;
 
 import java.util.*;
+
 public class Mammal extends Animal {
 
   private Boolean giveBirth;
   private Boolean drinkMilk;
 
 
-  public Mammal(String type, AgeType age, ArrayList<String> foods, String habitat, String motion){
+  public Mammal(String type, AgeType age, ArrayList<String> foods, String habitat, String motion) {
     super(type, age, foods, habitat, motion);
-    this.giveBirth = true;
-    this.drinkMilk = true;
+    this.giveBirth = giveBirth;
+    this.drinkMilk = drinkMilk;
   }
 
   public Boolean giveBirth() {
+    if (getType().equals("Platypus") || getType().equals("Echidna")) {
+      this.giveBirth = false;
+    } else {
+      this.giveBirth = true;
+    }
     return this.giveBirth;
   }
 
   public Boolean drinkMilk() {
     if (getAge().equals(AgeType.BABY)) {
-      return this.drinkMilk;
+      this.drinkMilk = true;
     } else {
-      return !this.drinkMilk;
+      this.drinkMilk = false;
     }
+    return this.drinkMilk;
   }
 
 
