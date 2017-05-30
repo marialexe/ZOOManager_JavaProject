@@ -20,12 +20,12 @@ public class MammalTest {
     ArrayList<String> foodMammal = new ArrayList<String>(
     Arrays.asList("antilope", "zebra", "giraphe"));
     mammal = new Mammal("Lion", AgeType.ADULT, foodMammal,
-      "savana", "walking");
+      HabitatType.SAVANNA, "walking");
 
     ArrayList<String> foodMammal1 = new ArrayList<String>(
     Arrays.asList("milk", "grasses"));
     mammal1 = new Mammal("Elephant", AgeType.BABY, foodMammal1,
-      "savana", "walking");
+      HabitatType.SAVANNA, "walking");
   }
 
   @Test
@@ -51,7 +51,7 @@ public class MammalTest {
 
   @Test 
   public void canGetHabitat() {
-    assertEquals("savana",mammal.getHabitat());
+    assertEquals(HabitatType.SAVANNA,mammal.getHabitat());
   }
 
   @Test

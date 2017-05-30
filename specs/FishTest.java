@@ -16,7 +16,7 @@ public class FishTest {
   public void before() {
     ArrayList<String> foodFish = new ArrayList<String>(Arrays.asList("plankton", "fish", "shrimp"));
     fish = new Fish("salmon", AgeType.ADULT, foodFish,
-      "river", "swimming");
+      HabitatType.RIVER, "swimming");
   }
 
   @Test

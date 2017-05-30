@@ -9,7 +9,7 @@ public class Mammal extends Animal {
   private Boolean drinkMilk;
 
 
-  public Mammal(String type, AgeType age, ArrayList<String> foods, String habitat, String motion) {
+  public Mammal(String type, AgeType age, ArrayList<String> foods, HabitatType habitat, String motion) {
     super(type, age, foods, habitat, motion);
     this.giveBirth = giveBirth;
     this.drinkMilk = drinkMilk;

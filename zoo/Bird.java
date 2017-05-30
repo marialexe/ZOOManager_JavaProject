@@ -9,7 +9,7 @@ public class Bird extends Animal {
   private Boolean eggs;
   private ArrayList<String> cantFlyBirds;
 
-  public Bird(String type, AgeType age, ArrayList<String> foods, String habitat, String motion) {
+  public Bird(String type, AgeType age, ArrayList<String> foods, HabitatType habitat, String motion) {
     super(type, age, foods, habitat, motion);
     this.fly = fly;
     this.eggs = true;

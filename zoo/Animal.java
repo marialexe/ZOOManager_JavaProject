@@ -8,10 +8,10 @@ public abstract class Animal {
   private String type;
   private AgeType age;
   private ArrayList<String> foods;
-  private String habitat;
+  private HabitatType habitat;
   private String motion;
   
-  public Animal(String type, AgeType age, ArrayList<String> foods, String habitat, String motion){
+  public Animal(String type, AgeType age, ArrayList<String> foods, HabitatType habitat, String motion){
     this.type = type;
     this.age = age;
     this.foods = foods;
@@ -31,7 +31,7 @@ public abstract class Animal {
     return this.foods;
   }
 
-  public String getHabitat() {
+  public HabitatType getHabitat() {
     return this.habitat;
   };
   public String getMotion() {

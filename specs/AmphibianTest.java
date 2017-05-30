@@ -16,7 +16,7 @@ public class AmphibianTest {
   public void before() {
     ArrayList<String> foodAmphibian = new ArrayList<String>(Arrays.asList("insects", "worm", "water snails"));
     amphibian = new Amphibian("frog", AgeType.ADULT, foodAmphibian,
-      "wetland", "jumping");
+      HabitatType.WETLAND, "jumping");
   }
 
   @Test

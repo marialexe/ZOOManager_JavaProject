@@ -21,17 +21,17 @@ public class BirdTest {
     ArrayList<String> foodBird = new ArrayList<String>(
     Arrays.asList("krill", "squid", "fishes"));
     bird = new Bird("penguin", AgeType.ADULT, foodBird,
-      "polar region", "swimming");
+      HabitatType.POLAR, "swimming");
 
     ArrayList<String> foodBird1 = new ArrayList<String>(
     Arrays.asList("insects", "lizards", "small rodents"));
     bird1 = new Bird("ostrich", AgeType.BABY, foodBird1,
-      "savanna", "walking");
+      HabitatType.SAVANNA, "walking");
 
     ArrayList<String> foodBird2 = new ArrayList<String>(
     Arrays.asList("insects", "fishes"));
     bird2 = new Bird("stork",AgeType.TEENAGER, foodBird2,
-      "marsh", "flying");
+      HabitatType.WETLAND, "flying");
   }
 
     @Test

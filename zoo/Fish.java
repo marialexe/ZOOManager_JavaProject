@@ -5,7 +5,7 @@ import enums.*;
 
 public class Fish extends Animal {
 
-  public Fish(String type, AgeType age, ArrayList<String> foods, String habitat, String motion) {
+  public Fish(String type, AgeType age, ArrayList<String> foods, HabitatType habitat, String motion) {
     super(type, age, foods, habitat, motion);
   }
 

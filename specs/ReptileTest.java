@@ -16,7 +16,7 @@ public class ReptileTest {
   public void before() {
     ArrayList<String> foodReptile = new ArrayList<String>(Arrays.asList("mammals", "birds", "amphibians"));
     reptile = new Reptile("crocodile", AgeType.ADULT, foodReptile,
-      "river", "belly running");
+      HabitatType.RIVER, "belly running");
   }
 
   @Test

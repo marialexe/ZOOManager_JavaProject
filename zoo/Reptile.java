@@ -7,7 +7,7 @@ public class Reptile extends Animal {
 
   private Boolean coldBlooded;
 
-  public Reptile (String type, AgeType age, ArrayList<String> foods, String habitat, String motion) {
+  public Reptile (String type, AgeType age, ArrayList<String> foods, HabitatType habitat, String motion) {
     super(type, age, foods, habitat, motion);
   }
 
