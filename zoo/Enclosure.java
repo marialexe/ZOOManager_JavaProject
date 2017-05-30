@@ -64,34 +64,22 @@ public class Enclosure {
 
 
   public String removeAnimal(Animal animal, Integer quantity) {
-
-    Boolean existingAnimal = false;
-
-    for (String key : animals.keySet()) {
-      if (key.equals(animal.getType())) {
-        existingAnimal = true;
-        break;
-      }
-    }
-
-    if (existingAnimal == false) {
-      return "The animal is not in the enclosure!";
-    } 
-    else {
+    if (animals.containsKey(animal.getType())) {
       if (quantity == animals.get(animal.getType())) {
         animals.remove(animal.getType());
-        return "The animal was completely removed from the enclosure!";
+        return "Animal completely removed from enclosure!";
       } 
       else if (quantity < animals.get(animal.getType())) {
         animals.put(animal.getType(),animals.get(animal.getType()) - quantity);
         System.out.println(animals);
-        return "The number was reduced!";
+        return "The number of animals was reduced!";
       }
       else {
         return "Sorry, not enough animals in the enclosure!";
       }
-
     }
-    
+    else {
+      return "Animal not in the enclosure!";
+    }
   }
 }
