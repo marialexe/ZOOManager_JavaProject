@@ -34,13 +34,4 @@ public class FishTest {
     assertEquals("Fish have no legs!", fish.noLegs());
   }
 
-
-
-
-
-
-
-
-
-
 }
