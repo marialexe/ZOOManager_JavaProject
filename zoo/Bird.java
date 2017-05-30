@@ -1,5 +1,6 @@
 package zoo;
 
+import enums.*;
 import java.util.*;
 
 public class Bird extends Animal {

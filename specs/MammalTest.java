@@ -8,6 +8,7 @@ import java.util.*;
 
 
 import zoo.*;
+import enums.*;
 
 public class MammalTest {
   Mammal mammal;
@@ -15,7 +16,7 @@ public class MammalTest {
 
   @Before
   public void before() {
-    
+
     ArrayList<String> foodMammal = new ArrayList<String>(
     Arrays.asList("antilope", "zebra", "giraphe"));
     mammal = new Mammal("Lion", AgeType.ADULT, foodMammal,

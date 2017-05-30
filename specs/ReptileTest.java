@@ -7,6 +7,7 @@ import org.junit.*;
 import java.util.*;
 
 import zoo.*;
+import enums.*;
 
 public class ReptileTest {
   Reptile reptile;

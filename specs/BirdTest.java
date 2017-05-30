@@ -8,6 +8,7 @@ import java.util.*;
 
 
 import zoo.*;
+import enums.*;
 
 public class BirdTest {
   Bird bird;
