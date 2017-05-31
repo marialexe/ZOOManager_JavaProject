@@ -1,6 +1,7 @@
 package zoo;
 
 import java.util.*;
+import interfaces.*;
 
 public class ZooKeeper {
 

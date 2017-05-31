@@ -1,7 +1,9 @@
 package zoo;
 
 import java.util.*;
+
 import enums.*;
+import interfaces.*;
 
 public class Fish extends Animal implements Edible {
 

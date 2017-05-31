@@ -1,7 +1,9 @@
 package zoo;
 
-import enums.*;
 import java.util.*;
+
+import enums.*;
+import interfaces.*;
 
 public abstract class Animal {
   

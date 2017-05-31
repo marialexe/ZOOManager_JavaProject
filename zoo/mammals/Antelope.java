@@ -4,6 +4,7 @@ import java.util.*;
 
 import zoo.*;
 import enums.*;
+import interfaces.*;
 
 public class Antelope extends Mammal implements Edible {
 
