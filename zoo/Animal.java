@@ -10,6 +10,7 @@ public abstract class Animal {
   private ArrayList<String> foods;
   private HabitatType habitat;
   private String motion;
+  private ArrayList<Edible> belly;
   
   public Animal(String type, AgeType age, ArrayList<String> foods, HabitatType habitat, String motion){
     this.type = type;
@@ -17,6 +18,7 @@ public abstract class Animal {
     this.foods = foods;
     this.habitat = habitat;
     this.motion = motion;
+    this.belly = new ArrayList<Edible>();
   }
 
   public String getType() {
@@ -27,7 +29,7 @@ public abstract class Animal {
     return this.age;
   }
 
-  public ArrayList<String> eat() {
+  public ArrayList<String> edibleFoods() {
     return this.foods;
   }
 
@@ -37,4 +39,8 @@ public abstract class Animal {
   public String getMotion() {
     return this.motion;
   };
+
+  public ArrayList<Edible> getBelly(){
+    return this.belly;
+  }
 }

@@ -11,67 +11,72 @@ import zoo.*;
 import enums.*;
 
 public class MammalTest {
-  Mammal mammal;
-  Mammal mammal1;
+  Mammal lion;
+  Mammal elephant;
 
   @Before
   public void before() {
 
-    ArrayList<String> foodMammal = new ArrayList<String>(
+    ArrayList<String> foodLion = new ArrayList<String>(
     Arrays.asList("antilope", "zebra", "giraphe"));
-    mammal = new Mammal("Lion", AgeType.ADULT, foodMammal,
+    lion = new Mammal("Lion", AgeType.ADULT, foodLion,
       HabitatType.SAVANNA, "walking");
 
-    ArrayList<String> foodMammal1 = new ArrayList<String>(
+    ArrayList<String> foodElephant = new ArrayList<String>(
     Arrays.asList("milk", "grasses"));
-    mammal1 = new Mammal("Elephant", AgeType.BABY, foodMammal1,
+    elephant = new Mammal("Elephant", AgeType.BABY, foodElephant,
       HabitatType.SAVANNA, "walking");
   }
 
   @Test
   public void canGetClass() {
-    assertThat(mammal, instanceOf(Mammal.class));
+    assertThat(lion, instanceOf(Mammal.class));
   }
 
   @Test
   public void canGetType() {
-    assertEquals("Lion",mammal.getType());
+    assertEquals("Lion",lion.getType());
   }
 
   @Test
   public void canGetAge(){
-    assertEquals(AgeType.ADULT,mammal.getAge());
+    assertEquals(AgeType.ADULT,lion.getAge());
   }
 
   @Test
   public void canGetFoods() {
-    assertEquals(2, mammal1.eat().size());
-    assertEquals(3, mammal.eat().size());
+    assertEquals(2, elephant.edibleFoods().size());
+    assertEquals(3, lion.edibleFoods().size());
   }
 
   @Test 
   public void canGetHabitat() {
-    assertEquals(HabitatType.SAVANNA,mammal.getHabitat());
+    assertEquals(HabitatType.SAVANNA,lion.getHabitat());
   }
 
   @Test
   public void canGetMotion() {
-    assertEquals("walking",mammal.getMotion());
+    assertEquals("walking",lion.getMotion());
   }
 
   @Test
   public void canGiveBirth() {
-    assertEquals(true,mammal.giveBirth());
+    assertEquals(true,lion.giveBirth());
   }
 
   @Test
   public void canDrinkMilk_adult() {
-    assertEquals(false,mammal.drinkMilk());
+    assertEquals(false,lion.drinkMilk());
   }
 
   @Test
   public void canDrinkMilk_baby() {
-    assertEquals(true,mammal1.drinkMilk());
+    assertEquals(true,elephant.drinkMilk());
+  }
+
+  @Test
+  public void canGetEmptyBelly() {
+    assertEquals(0,elephant.getBelly().size());
   }
 
 }

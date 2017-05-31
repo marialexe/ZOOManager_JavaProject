@@ -3,7 +3,7 @@ package zoo;
 import enums.*;
 import java.util.*;
 
-public class Bird extends Animal {
+public class Bird extends Animal implements Edible {
 
   private Boolean fly;
   private Boolean eggs;
@@ -28,6 +28,10 @@ public class Bird extends Animal {
 
   public Boolean layEggs() {
     return this.eggs;
+  }
+
+  public String foodType() {
+    return getType();
   }
 
 }
