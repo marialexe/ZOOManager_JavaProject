@@ -88,6 +88,12 @@ public class EnclosureTest {
 
   }
 
+  @Test
+  public void canRemoveAnimal_completely2() {
+    enclosure.addAnimal(penguin,15);
+    assertEquals("Animal completely removed from enclosure!",enclosure.removeAnimal(penguin,15));
+  }
+
   @Test 
   public void canRemoveAnimal_partially() {
     enclosure.addAnimal(seal,10);
@@ -95,6 +101,12 @@ public class EnclosureTest {
     enclosure.removeAnimal(seal,5);
     enclosure.removeAnimal(penguin,5);
     assertEquals(2,enclosure.getAnimals().size());
-
   }
+
+  @Test 
+  public void canRemoveAnimal_partially2() {
+    enclosure.addAnimal(seal,10);
+    assertEquals("The number of animals was reduced!",enclosure.removeAnimal(seal,5));
+  }
+
 }
