@@ -66,5 +66,4 @@ public class ZooKeeperTest {
     assertEquals(true,giraphe.drinkMilk());
   }
 
-
 }

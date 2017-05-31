@@ -9,17 +9,19 @@ public class Enclosure {
   private HabitatType habitat;
   private String type;
   private Integer maxCapacity;
-  private HashMap<String,Integer> animals;
+  private HashMap<String,Integer> animalsLog;
+  private ArrayList<Animal> arrayAnimals;
 
   public Animal animal;
   public Integer quantity;
 
-  public Enclosure(Integer number, HabitatType habitat, String type, Integer maxCapacity, HashMap<String,Integer> animals) {
+  public Enclosure(Integer number, HabitatType habitat, String type, Integer maxCapacity, HashMap<String,Integer> animalsLog) {
     this.number = number;
     this.habitat = habitat;
     this.type = type;
     this.maxCapacity = maxCapacity;
-    this.animals = new HashMap<String,Integer>();
+    this.animalsLog = new HashMap<String,Integer>();
+    this.arrayAnimals = new ArrayList<Animal>();
 
   }
 
@@ -40,38 +42,51 @@ public class Enclosure {
   }
 
   public HashMap<String,Integer> getAnimals() {
-    return this.animals;
+    return this.animalsLog;
+  }
+
+  public ArrayList<Animal> getArrayAnimals() {
+    return this.arrayAnimals;
   }
 
   public String addAnimal(Animal animal,Integer quantity) {
 
     Boolean existingAnimal = false;
 
-    for (String key : animals.keySet()) {
+    for (String key : animalsLog.keySet()) {
       if (key.equals(animal.getType())) {
         existingAnimal = true;
-        this.animals.put(key,animals.get(key) + quantity);
+        this.animalsLog.put(key,animalsLog.get(key) + quantity);
       }  
     }
 
     if (existingAnimal == false) {
-      this.animals.put(animal.getType(),quantity);
+      this.animalsLog.put(animal.getType(),quantity);
+      this.arrayAnimals.add(animal);
     }
     
-    Integer hashsize = animals.size();
-    return "Animal added to the enclosure!";
+    Integer hashsize = animalsLog.size();
+    Integer arraysize = arrayAnimals.size();
+
+    if (hashsize == arraysize) {
+      return "Animal added to the enclosure!";
+    } else {
+      return "ACHTUNG! Animal not properly added!!!";
+    }
+    
   }
 
 
   public String removeAnimal(Animal animal, Integer quantity) {
-    if (animals.containsKey(animal.getType())) {
-      if (quantity == animals.get(animal.getType())) {
-        animals.remove(animal.getType());
+    if (animalsLog.containsKey(animal.getType())) {
+      if (quantity == animalsLog.get(animal.getType())) {
+        this.animalsLog.remove(animal.getType());
+        this.arrayAnimals.remove(animal);
         return "Animal completely removed from enclosure!";
       } 
-      else if (quantity < animals.get(animal.getType())) {
-        animals.put(animal.getType(),animals.get(animal.getType()) - quantity);
-        System.out.println(animals);
+      else if (quantity < animalsLog.get(animal.getType())) {
+        this.animalsLog.put(animal.getType(),animalsLog.get(animal.getType()) - quantity);
+        System.out.println(animalsLog);
         return "The number of animals was reduced!";
       }
       else {

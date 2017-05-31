@@ -7,13 +7,15 @@ import enums.*;
 
 public class BigCats extends Mammal {
   
-  public Antelope(String type, AgeType age, ArrayList<String> foods, HabitatType habitat, String motion) {
+  public BigCats(String type, AgeType age, ArrayList<String> foods, HabitatType habitat, String motion) {
     super(type, age, foods, habitat, motion);
   }
   
-  public String foodType() {
-    return getType();
+  public String run() {
+    return "We are the fastest running mammals!";
   }
 
+  public String walk() {
+    return "We can walk, but we prefer running!";
   }
 }

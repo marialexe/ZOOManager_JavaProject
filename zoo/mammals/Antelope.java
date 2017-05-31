@@ -12,6 +12,14 @@ public class Antelope extends Mammal implements Edible {
     super(type, age, foods, habitat, motion);
   }
   
+  public String walk() {
+    return "Enjoys walking!";
+  }
+
+  public String run() {
+    return "When I see a big cat, I am running!";
+  }
+
   public String foodType() {
     return getType();
   }
