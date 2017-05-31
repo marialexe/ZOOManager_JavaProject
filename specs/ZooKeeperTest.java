@@ -39,7 +39,7 @@ public class ZooKeeperTest {
 
     ArrayList<String> foodGiraphe = new ArrayList<String>(
     Arrays.asList("grasses", "bushes"));
-    giraphe = new Giraphe("Giraphe", AgeType.ADULT, foodGiraphe,
+    giraphe = new Giraphe("Giraphe", AgeType.BABY, foodGiraphe,
       HabitatType.SAVANNA, "walking");
   }
 
@@ -61,6 +61,10 @@ public class ZooKeeperTest {
     assertEquals(2,lion.getBelly().size());
   }
 
+  @Test
+  public void canGirapheDrinkMilk(){
+    assertEquals(true,giraphe.drinkMilk());
+  }
 
 
 }
