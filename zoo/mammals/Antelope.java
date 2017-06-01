@@ -6,7 +6,7 @@ import zoo.*;
 import enums.*;
 import interfaces.*;
 
-public class Antelope extends Mammal implements Edible {
+public class Antelope extends Mammal implements Walking, Running, Edible {
 
   public Antelope(String type, AgeType age, ArrayList<String> foods, HabitatType habitat, String motion) {
     super(type, age, foods, habitat, motion);

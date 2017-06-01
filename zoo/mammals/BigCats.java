@@ -4,8 +4,9 @@ import java.util.*;
 
 import zoo.*;
 import enums.*;
+import interfaces.*;
 
-public class BigCats extends Mammal {
+public class BigCats extends Mammal implements Walking, Running {
   
   public BigCats(String type, AgeType age, ArrayList<String> foods, HabitatType habitat, String motion) {
     super(type, age, foods, habitat, motion);

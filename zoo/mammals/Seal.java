@@ -6,7 +6,7 @@ import zoo.*;
 import enums.*;
 import interfaces.*;
 
-public class Seal extends Mammal implements Edible {
+public class Seal extends Mammal implements Swimming, Crawling, Edible {
   
   public Seal(String type, AgeType age, ArrayList<String> foods, HabitatType habitat, String motion) {
     super(type, age, foods, habitat, motion);
