@@ -13,6 +13,8 @@ import enums.*;
 public class MammalTest {
   Mammal lion;
   Mammal elephant;
+  Mammal platypus;
+  Mammal echidna;
 
   @Before
   public void before() {
@@ -26,6 +28,16 @@ public class MammalTest {
     Arrays.asList("milk", "grasses"));
     elephant = new Mammal("Elephant", AgeType.BABY, foodElephant,
       HabitatType.SAVANNA, "walking");
+
+    ArrayList<String> foodPlatypus = new ArrayList<String>(
+    Arrays.asList("grasses"));
+    platypus = new Mammal("Platypus", AgeType.TEENAGER, foodPlatypus,
+      HabitatType.WETLAND, "walking");
+
+    ArrayList<String> foodEchidna = new ArrayList<String>(
+    Arrays.asList("insects"));
+    echidna = new Mammal("Echidna", AgeType.ADULT, foodEchidna,
+      HabitatType.WETLAND, "walking");
   }
 
   @Test
@@ -60,8 +72,15 @@ public class MammalTest {
   }
 
   @Test
-  public void canGiveBirth() {
+  public void canGiveBirth_true() {
     assertEquals(true,lion.giveBirth());
+    assertEquals(true,elephant.giveBirth());
+  }
+
+  @Test
+  public void canGiveBirth_false() {
+    assertEquals(false,platypus.giveBirth());
+    assertEquals(false,echidna.giveBirth());
   }
 
   @Test
